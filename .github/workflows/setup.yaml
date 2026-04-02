@@ -19,8 +19,8 @@ jobs:
   
     - name: Setup web
       run : |
-        rm -f /var/www/html/index.*
-        cp -r web/* /var/www/html/
+        sudo rm -f /var/www/html/index.*
+        sudo cp -r web/* /var/www/html/
         
 
  
