@@ -9,12 +9,16 @@ jobs:
   simplejob: ## <-- name of the job
     runs-on: self-hosted # Runner (agent for carrying out job)
     steps: 
-    - name: greeting step
-      run: echo "Welcome world!"
+    - name: install nginx
+      run: |
+        sudo apt update -y
+        sudo apt install nginx -y
 
-    - name: Another step
-      run: echo "Another command"
-
-    - name: Switched to Self-hosted
+    - name: checkout
+      uses: actions/checkout@v6
+  
+    - name: Setup web
       run : echo "Self Hosted"
+
+ 
     
