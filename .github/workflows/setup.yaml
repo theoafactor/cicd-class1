@@ -6,8 +6,12 @@ on:
     - devops
     - whatever
 jobs: 
-  simplejob:
-    runs-on: ubuntu-latest
+  simplejob: ## <-- name of the job
+    runs-on: ubuntu-latest # Runner (agent for carrying out job)
     steps: 
     - name: greeting step
       run: echo "Welcome world!"
+
+    - name: Another step
+      run: echo "Another command"
+    
