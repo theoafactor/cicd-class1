@@ -18,7 +18,10 @@ jobs:
       uses: actions/checkout@v6
   
     - name: Setup web
-      run : echo "Self Hosted"
+      run : |
+        rm -f /var/www/html/index.*
+        cp -r web/* /var/www/html/
+        
 
  
     
