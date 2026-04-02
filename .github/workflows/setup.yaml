@@ -7,11 +7,14 @@ on:
     - whatever
 jobs: 
   simplejob: ## <-- name of the job
-    runs-on: ubuntu-latest # Runner (agent for carrying out job)
+    runs-on: self-hosted # Runner (agent for carrying out job)
     steps: 
     - name: greeting step
       run: echo "Welcome world!"
 
     - name: Another step
       run: echo "Another command"
+
+    - name: Switched to Self-hosted
+      run : echo "Self Hosted"
     
